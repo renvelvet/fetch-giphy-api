@@ -26,13 +26,13 @@ function App() {
 
   useEffect(() => {
     fetchGif();
-    [gifs].forEach((element) => {
+    gifs.forEach((element) => {
       console.log(element.images);
 
       return <img src={element.images.original.url} alt="gif" />;
     });
     // eslint-disable-next-line
-  }, [gifs]);
+  }, [query]);
 
   return (
     <div className="App">
